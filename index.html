@@ -7,12 +7,12 @@
 <script>
 /* =====================================================================
    ✏️  所有内容都在这里修改 —— EDIT ALL CONTENT BELOW
-   - 图片/视频放在 assets/ 文件夹，路径写 "assets/xxx.jpg"
+   - 图片/视频和 index.html 放在同一层，路径直接写文件名，如 "xxx.jpg"
    - 文字里用 **文字** 表示加粗
    - 作者名单里与 me 一致的名字会自动加粗（忽略 † * 标记）
    - media 可以是一个或多个（数组）：
-       { type: "image",   src: "assets/x.jpg", caption: "..." }
-       { type: "video",   src: "assets/x.mp4", poster: "assets/x.jpg", caption: "..." }
+       { type: "image",   src: "x.jpg", caption: "..." }
+       { type: "video",   src: "x.mp4", poster: "x.jpg", caption: "..." }
        { type: "youtube", src: "https://www.youtube.com/watch?v=XXXX" }
    - 每个 section 可以用 items（项目条目）或 list（简单列表）
    - 删除一个项目：删掉对应的 { ... } 整块即可
@@ -20,13 +20,13 @@
 const SITE = {
   name: "Meiying Ren",
   tagline: "M.S. Student, Southern University of Science and Technology",
-  photo: "assets/profile.jpg",
+  photo: "profile.jpg",
   github: "",                       // 有 GitHub 就填链接，空着则不显示
   title: "Meiying Ren | Haptics & Soft Electronics",
   me: "Meiying Ren",
 
   links: [
-    { label: "CV", url: "assets/CV_Meiying_Ren.pdf" },
+    { label: "CV", url: "CV_Meiying_Ren.pdf" },
     { label: "Email", url: "mailto:12432500@mail.sustech.edu.cn" }
   ],
 
@@ -46,12 +46,12 @@ const SITE = {
           venue: "Manuscript under review († equal contribution)",
           award: "",
           links: [
-            { label: "video", url: "assets/metaskin-movie.mp4" }
+            { label: "video", url: "metaskin-movie.mp4" }
           ],
           media: [
-            { type: "video", src: "assets/metaskin-movie.mp4", poster: "assets/metaskin-poster.jpg",
+            { type: "video", src: "metaskin-movie.mp4", poster: "metaskin-poster.jpg",
               caption: "Movie S1: a user in Beijing and a user in Shenzhen touching each other through Meta-skin; recognizing shapes and sharing affective touch (e.g., a palm kiss)." },
-            { type: "image", src: "assets/metaskin-fig1.jpg",
+            { type: "image", src: "metaskin-fig1.jpg",
               caption: "(A) Bidirectional remote touch between two cities. (B) Layered structure. (C) SEM cross-section. (D) 47-channel Meta-skin on the hand. (E) Sensing and stimulation share one electrode at the skin interface." }
           ],
           description: "Remote touch requires a device that both **senses** touch on one user and **reproduces** it on another. However, existing haptic gloves and skins separate sensors from millimeter-thick actuators, which interfere with the user's own natural touch. **Instead, we use the skin itself as part of the device:** an <80 µm, 0.41 g patch whose electrodes form an iontronic interface with the skin, so that each of its 47 channels both measures pressure and delivers electrotactile stimulation (time-multiplexed, 32 ms sensing / 20 ms stimulation). Touch on User A is encoded into channel location and current intensity, sent over Wi-Fi, and rendered on User B's hand. Across 2,000+ km (Beijing–Shenzhen), **remote users recognized touched location (>93.7%), 18 object shapes (>93%), and weights (>92.7%)**, while wearing the inactive patch left natural weight discrimination unchanged, unlike gloves. We also designed eight affective touch patterns (e.g., stroke, kiss, punch, scratch); **participants recognized their emotional valence with 98.7% accuracy**, and the patterns separated cleanly in valence–arousal space.",
