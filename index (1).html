@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meiying Ren | Haptics &amp; Soft Electronics</title>
+<script>
+/* =====================================================================
+   ✏️  所有内容都在这里修改 —— EDIT ALL CONTENT BELOW
+   - 图片/视频和 index.html 放在同一层，路径直接写文件名，如 "xxx.jpg"
+   - 文字里用 **文字** 表示加粗
+   - 作者名单里与 me 一致的名字会自动加粗（忽略 † * 标记）
+   - media 可以是一个或多个（数组）：
+       { type: "image",   src: "x.jpg", caption: "..." }
+       { type: "video",   src: "x.mp4", poster: "x.jpg", caption: "..." }
+       { type: "youtube", src: "https://www.youtube.com/watch?v=XXXX" }
+   - 每个 section 可以用 items（项目条目）或 list（简单列表）
+   - 删除一个项目：删掉对应的 { ... } 整块即可
+   ===================================================================== */
+const SITE = {
+  name: "Meiying Ren",
+  tagline: "M.S. Student, Southern University of Science and Technology",
+  photo: "profile.jpg",
+  github: "",                       // 有 GitHub 就填链接，空着则不显示
+  title: "Meiying Ren | Haptics & Soft Electronics",
+  me: "Meiying Ren",
+
+  links: [
+    { label: "CV", url: "CV_Meiying_Ren.pdf" },
+    { label: "12432500@mail.sustech.edu.cn", url: "mailto:12432500@mail.sustech.edu.cn" }
+  ],
+
+  bio: [
+    "Meiying Ren is an M.S. student in Materials Science and Engineering at the Southern University of Science and Technology (SUSTech), advised by Prof. Chuanfei Guo.",
+    "Her work sits between **soft materials** and **haptic interaction**. She builds skin-integrated devices, from the polymer chemistry up to the multichannel system, that sense touch on one person's hand and reproduce it as **electrotactile stimulation** on another's, across distance. She is especially interested in how such touch can carry **emotion and social meaning**, and in bringing it into virtual reality.",
+    "She is the co-first author of a manuscript on epidermal haptic interfaces (under review) and holds two pending patents on tactile interaction systems."
+  ],
+
+  sections: [
+    {
+      heading: "Research",
+      items: [
+        {
+          title: "Epidermal Iontronic Meta-skins for Remote Haptic Interaction",
+          authors: "Meiying Ren†, Tao Huang†, Shuai Dong†, Wanyi Fang, Shaochi Fang, Ping Jiang, Haoyu Guo, Kuanming Yao, Xinge Yu, Chuan Fei Guo",
+          venue: "Manuscript under review († equal contribution)",
+          award: "",
+          links: [
+            { label: "video", url: "metaskin-movie.mp4" }
+          ],
+          media: [
+            { type: "video", src: "metaskin-movie.mp4", poster: "metaskin-poster.jpg",
+              caption: "Movie S1: a user in Beijing and a user in Shenzhen touching each other through Meta-skin; recognizing shapes and sharing affective touch (e.g., a palm kiss)." },
+            { type: "image", src: "metaskin-fig1.jpg",
+              caption: "(A) Bidirectional remote touch between two cities. (B) Layered structure. (C) SEM cross-section. (D) 47-channel Meta-skin on the hand. (E) Sensing and stimulation share one electrode at the skin interface. (F) Bidirectional sensing, encoding, and tactile reproduction. (G) Time-division multiplexing of sensing and stimulation. Click to enlarge." }
+          ],
+          description: "Remote touch requires a device that both **senses** touch on one user and **reproduces** it on another. However, existing haptic gloves and skins separate sensors from millimeter-thick actuators, which interfere with the user's own natural touch. **Instead, we use the skin itself as part of the device:** an <80 µm, 0.41 g patch whose electrodes form an iontronic interface with the skin, so that each of its 47 channels both measures pressure and delivers electrotactile stimulation (time-multiplexed, 32 ms sensing / 20 ms stimulation). Touch on User A is encoded into channel location and current intensity, sent over Wi-Fi, and rendered on User B's hand. Across 2,000+ km (Beijing–Shenzhen), **remote users recognized touched location (>93.7%), 18 object shapes (>93%), and weights (>92.7%)**, while wearing the inactive patch left natural weight discrimination unchanged, unlike gloves. We also designed eight affective touch patterns (e.g., stroke, kiss, punch, scratch); **participants recognized their emotional valence with 98.7% accuracy**, and the patterns separated cleanly in valence–arousal space.",
+          role: "Co-first author. Designed the overall device structure and carried out its performance testing; contributed to the PCB schematic design; collaborated on the bidirectional remote-interaction code; designed and ran the affective-interaction experiments."
+        }
+      ]
+    },
+    {
+      heading: "Other Projects",
+      list: [
+        "**Low-drift, low-hysteresis poly(ionic liquid) elastomers** (SUSTech, 2024–2025). Designed [VBIM][TFSI]-based crosslinked networks for iontronic sensing; screened six formulations and limited signal drift to <1% over 10 min.",
+        "**Carbon-fiber-reinforced guzheng plectra** (Chang'an University, 2023–2024). Developed composite plectra and a matched mold for batch fabrication; reached 86.3% FFT spectral similarity to a traditional plectrum. Two granted patents."
+      ]
+    },
+    {
+      heading: "Patents",
+      list: [
+        "A Tactile Interaction System and Its Control Method. (pending)",
+        "A Grid-Structured Spacer for an Iontronic Pressure Sensor. (pending)",
+        "A Carbon Fiber Composite Guzheng Plectrum. CN116645935A",
+        "A Metal Mold for Manufacturing Carbon Fiber Composite Guzheng Plectra. CN221641846U"
+      ]
+    },
+    {
+      heading: "Other Publications",
+      list: [
+        "Zhang, Y., Li, J., Hao, L., Chen, Y., **Ren, M.**, Li, D., & Gou, L. Performance of jujube-derived carbon-modified MnO₂ cathode materials for zinc–manganese batteries. *Chemical Engineering*, 50(3), 25–29 (2022)."
+      ]
+    },
+    {
+      heading: "Skills",
+      list: [
+        "**Hardware & fabrication:** flexible electrode fabrication, screen printing, multilayer soft-device integration, electrospinning, polymer/elastomer synthesis.",
+        "**Electronics:** PCB prototyping with Altium Designer; embedded signal acquisition with STM32CubeIDE (collaborative); electrotactile stimulation parameter design.",
+        "**Characterization & studies:** sensor calibration, EIS, SEM, mechanical testing, rheology; psychophysics-style perception studies with human participants.",
+        "**Analysis & media:** Python, Origin, FFT; Adobe Illustrator, Premiere Pro."
+      ]
+    }
+  ]
+};
+</script>
+<style>
+  :root { --text:#595959; --head:#222; --link:#267CB9; --link-h:#069; --line:#e5e5e5; --bg:#fff; --award:#b8860b; --muted:#888; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:14px/1.5 "Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+  a { color:var(--link); text-decoration:none; } a:hover { color:var(--link-h); }
+  h1,h2,h3 { color:var(--head); margin:0 0 20px; line-height:1.1; }
+  h1 { font-size:28px; } h2 { font-size:22px; margin-top:36px; } h3 { font-size:18px; line-height:1.3; margin-bottom:8px; }
+  strong { color:#222; font-weight:700; }
+  p { margin:0 0 16px; }
+  .wrapper { width:860px; margin:0 auto; padding:50px 0; }
+  header { width:270px; float:left; position:fixed; }
+  header .site { font-size:28px; font-weight:700; color:var(--head); display:block; margin-bottom:16px; }
+  header img.avatar { width:130px; /* ← 头像大小：改这个数字，越小越小 */ height:auto; border-radius:50%; display:block; margin-bottom:16px; }
+  section { width:540px; float:right; padding-bottom:50px; }
+  .linkrow a { margin-right:10px; }
+  .item { margin-bottom:40px; }
+  .meta { margin-bottom:6px; }
+  .award { color:var(--award); font-weight:700; margin-bottom:6px; }
+  .media { margin:12px 0; }
+  .media img, .media video { width:100%; display:block; border:1px solid var(--line); background:#000; }
+  .media img { background:#fff; }
+  .media figcaption { font-size:12px; color:var(--muted); margin-top:4px; }
+  .role { font-size:13px; border-left:3px solid var(--line); padding-left:10px; }
+  .yt { position:relative; padding-top:56.25%; }
+  .yt iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+  ul.plain { padding-left:18px; margin:0; } ul.plain li { margin-bottom:8px; }
+  footer { clear:both; font-size:11px; padding:20px 0; }
+  @media (max-width:960px) {
+    .wrapper { width:auto; margin:0; padding:24px 16px; }
+    header, section { float:none; position:static; width:auto; }
+    header { margin-bottom:24px; }
+    header img.avatar { width:110px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <header id="side"></header>
+  <section id="main"></section>
+  <footer id="foot"></footer>
+</div>
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>");
+const linkList = ls => (ls||[]).filter(l => l.url).map(l => l.url.startsWith("mailto:") ? `<a href="${esc(l.url)}">${esc(l.label)}</a>` : `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`);
+const ytId = u => (String(u).match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/) || [])[1] || "";
+function oneMedia(m){
+  if (!m || !m.src) return "";
+  const cap = m.caption ? `<figcaption>${md(m.caption)}</figcaption>` : "";
+  if (m.type === "youtube") return `<figure class="media"><div class="yt"><iframe src="https://www.youtube.com/embed/${ytId(m.src)}" allowfullscreen title="video"></iframe></div>${cap}</figure>`;
+  if (m.type === "video") return `<figure class="media"><video src="${esc(m.src)}" ${m.poster ? `poster="${esc(m.poster)}"` : ""} autoplay muted loop playsinline controls preload="metadata"></video>${cap}</figure>`;
+  return `<figure class="media"><a href="${esc(m.src)}" target="_blank" rel="noopener"><img src="${esc(m.src)}" alt="${esc(m.caption || "")}" loading="lazy"></a>${cap}</figure>`;
+}
+const media = m => (Array.isArray(m) ? m : [m]).map(oneMedia).join("");
+const authors = a => esc(a).split(", ").map(n => n.replace(/[†*]/g,"") === SITE.me ? `<strong>${n}</strong>` : n).join(", ");
+
+document.title = SITE.title;
+document.getElementById("side").innerHTML = `
+  <span class="site">${esc(SITE.name)}</span>
+  ${SITE.photo ? `<img class="avatar" src="${esc(SITE.photo)}" alt="${esc(SITE.name)}">` : ""}
+  <p>${esc(SITE.tagline)}</p>
+  ${SITE.github ? `<p><a href="${esc(SITE.github)}" target="_blank" rel="noopener">View My GitHub Profile</a></p>` : ""}`;
+document.getElementById("main").innerHTML = `
+  <h1>${esc(SITE.title)}</h1>
+  <p class="linkrow">${linkList(SITE.links).join(" ")}</p>
+  ${SITE.bio.map(p => `<p>${md(p)}</p>`).join("")}
+  ${SITE.sections.map(sec => `
+    <h2>${esc(sec.heading)}</h2>
+    ${sec.list ? `<ul class="plain">${sec.list.map(li => `<li>${md(li)}</li>`).join("")}</ul>` : ""}
+    ${(sec.items||[]).map(it => `
+      <div class="item">
+        <h3>${esc(it.title)}</h3>
+        <div class="meta">${authors(it.authors)}${it.venue ? ". " + esc(it.venue) : ""}</div>
+        ${it.award ? `<div class="award">${esc(it.award)}</div>` : ""}
+        ${linkList(it.links).length ? `<div>${linkList(it.links).join(", ")}</div>` : ""}
+        ${media(it.media)}
+        <p>${md(it.description)}</p>
+        ${it.role ? `<p class="role"><strong>My role:</strong> ${md(it.role)}</p>` : ""}
+      </div>`).join("")}`).join("")}`;
+document.getElementById("foot").innerHTML = `© ${new Date().getFullYear()} ${esc(SITE.name)}`;
+</script>
+</body>
+</html>
