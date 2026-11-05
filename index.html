@@ -43,9 +43,11 @@ const SITE = {
         {
           title: "Epidermal Iontronic Meta-skins for Remote Haptic Interaction",
           authors: "Meiying Ren†, Tao Huang†, Shuai Dong†, Wanyi Fang, Shaochi Fang, Ping Jiang, Haoyu Guo, Kuanming Yao, Xinge Yu, Chuan Fei Guo",
+          url: "metaskin/",                 // 标题点击后进入的项目详情页
           venue: "Manuscript under review († equal contribution)",
           award: "",
           links: [
+            { label: "project page", url: "metaskin/" },
             { label: "video", url: "metaskin-movie.mp4" }
           ],
           media: [
@@ -99,6 +101,7 @@ const SITE = {
   body { margin:0; background:var(--bg); color:var(--text); font:14px/1.5 "Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
   a { color:var(--link); text-decoration:none; } a:hover { color:var(--link-h); }
   h1,h2,h3 { color:var(--head); margin:0 0 20px; line-height:1.1; }
+  h3 a { color:var(--head); border-bottom:1px solid var(--line); } h3 a:hover { color:var(--link); border-color:var(--link); }
   h1 { font-size:28px; } h2 { font-size:22px; margin-top:36px; } h3 { font-size:18px; line-height:1.3; margin-bottom:8px; }
   strong { color:#222; font-weight:700; }
   p { margin:0 0 16px; }
@@ -164,7 +167,7 @@ document.getElementById("main").innerHTML = `
     ${sec.list ? `<ul class="plain">${sec.list.map(li => `<li>${md(li)}</li>`).join("")}</ul>` : ""}
     ${(sec.items||[]).map(it => `
       <div class="item">
-        <h3>${esc(it.title)}</h3>
+        <h3>${it.url ? `<a href="${esc(it.url)}">${esc(it.title)}</a>` : esc(it.title)}</h3>
         <div class="meta">${authors(it.authors)}${it.venue ? ". " + esc(it.venue) : ""}</div>
         ${it.award ? `<div class="award">${esc(it.award)}</div>` : ""}
         ${linkList(it.links).length ? `<div>${linkList(it.links).join(", ")}</div>` : ""}
